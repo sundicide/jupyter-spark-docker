@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  spark-jupyter-docker:
+    container_name: spark-jupyter-docker
+    build:
+      context: .
+    volumes:
+      - ./data:/data
+      - ./notebooks:/notebooks
+    ports:
+      - '8888:8888'
+      - '4040:4040'
+
+volumes:
+  data:
+  notebooks:
