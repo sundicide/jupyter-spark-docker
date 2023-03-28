@@ -1,4 +1,4 @@
-# jupyter-spark Docker container
+# jupyter-spark Docker container template
 
 ## Setup
 - If you'll need to load a dataset, you can add the files inside the data folder or update the volumes in the docker-compose.yml pointing to where your data directory is.
