@@ -1,12 +1,11 @@
 FROM continuumio/anaconda3:2023.09-0
 
-MAINTAINER ian.shiundu@gmail.com
-
 ENV PATH="${PATH}:/opt/conda/bin"
 
 # Install Jupyter, Java & Spark
 
 RUN /opt/conda/bin/conda install openjdk=8.0.152 jupyter -y --quiet
+RUN /opt/conda/bin/conda install -c conda-forge openjdk=8.0.152 jupyterlab -y --quiet
 
 RUN sed -i 's/buster/oldstable/g' /etc/apt/sources.list && \
     apt-get update && apt-get install -y curl
