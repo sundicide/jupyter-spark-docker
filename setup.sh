@@ -12,6 +12,10 @@ if [ ! -f /config/jupyter_notebook_config.py ]; then
     cp /jupyter_notebook_config.py /config/jupyter_notebook_config.py
 fi
 
+if [ ! -f /config/jupyter_lab_config.py ]; then
+    cp /jupyter_lab_config.py /config/jupyter_lab_config.py
+fi
+
 if [ ! -d /config/spark ]; then
     mv spark-3.2.3-bin-hadoop2.7 /config/spark
     rm spark-3.2.3-bin-hadoop2.7.tgz
@@ -23,6 +27,7 @@ fi
 
 mkdir -p /root/.jupyter
 cp /config/jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
+cp /config/jupyter_lab_config.py /root/.jupyter/jupyter_lab_config.py
 
 mkdir -p /root/.local/share/jupyter/kernels/jupyter-spark
 cp /config/kernel.json /root/.local/share/jupyter/kernels/jupyter-spark/kernel.json

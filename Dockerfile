@@ -16,6 +16,7 @@ RUN tar -xf spark-3.2.3-bin-hadoop2.7.tgz
 # Copy files
 
 COPY jupyter_notebook_config.py /jupyter_notebook_config.py
+COPY jupyter_lab_config.py /jupyter_lab_config.py
 
 COPY setup.sh /setup.sh
 RUN chmod +x /setup.sh
