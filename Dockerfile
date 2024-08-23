@@ -1,4 +1,4 @@
-FROM continuumio/anaconda3:latest
+FROM continuumio/anaconda3:2023.09-0
 
 MAINTAINER ian.shiundu@gmail.com
 
