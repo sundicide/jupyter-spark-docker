@@ -1,8 +1,8 @@
 # jupyter-spark Docker container
 
 > [!CAUTION]
-> Not compatible with Windows OS.
-> Recommended on WSL or MAC OS
+> Not compatible with `Windows OS`. <br/>
+> Recommended on `WSL` or `MAC OS`
 
 ## Setup
 - If you'll need to load a dataset, you can add the files inside the data folder or update the volumes in the docker-compose.yml pointing to where your data directory is.
